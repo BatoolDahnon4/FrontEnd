@@ -8,11 +8,10 @@
 </head>
 <style>
     body{
-     width: 100%;
+     width: 100vw;
       height: 100vh;
-      flex-direction: column;
+      flex-flow: column;
       display: flex;
- 
     }
 
   .header{
@@ -22,57 +21,57 @@
    
   .left-section{
     display: inline-flex;
-  
     flex-grow: 2;
     background-color: rgba(57, 131, 192, 0.699);
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;  
-}
+    }
+
   .main-content1{
     flex-grow: 5;
     background-color: burlywood;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-  }
+   }
+
   .footer{
     flex-grow: 1;
     background-color: blue;
     clear: both;
-  }
+   }
    </style>
+
 <script>
     var count =0;
     function addFunction(){
         var x = document.querySelector("#testOut");
-        x.innerHTML= x.innerHTML+"<div>count " +count+ "</div>" ;
+        x.innerHTML= x.innerHTML+" <div>count " +count+ "</div>" ;
         count++;
     }
     function clearr(){
         var x = document.querySelector("#testOut");
         x.innerHTML = "";
+        count = 0;
     }
 </script>
-   <body>
-     <div class="header">
-       Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Quis quaerat quam vel impedit. Aliquam dolor enim pariatur corrupti porro,
-         distinctio ducimus praesentium soluta iste? Voluptatibus nesciunt molestias
-          ipsum necessitatibus! Blanditiis.
-          <div class="sub-header">
-            <div>
-              <button  onclick="addFunction()">Add</button>
-            </div>
 
+   <body>
+     <div class = "header">
+       Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    
+          <div class = "sub-header">
+            <div><button  onclick="addFunction()">Add</button></div>
             <div class="sub" id="testOut">TEXT</div>
              <button onclick="clearr()">Clear</button>
           </div>
+
     </div>
    
      <div class="left-section"> Left Section</div>
      <div class="left-section main-content1">Main Content1 </div>
-      </div>
+
     <div class="footer"> Footer </div>
 </body>
 </html>
